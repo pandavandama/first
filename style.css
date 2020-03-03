@@ -1,6 +1,41 @@
-body{padding: 0; margin: 0;}
-body::-webkit-scrollbar {width: 15px;}
-body::-webkit-scrollbar-thumb{ background: rgba(0, 0, 0, 0.4);}
-header{background: rgb(87, 204, 240); display: block; width: 100%; height: 500px; position: relative;top:0}
-main{background: white; display: block; width: 100%; position: relative;}
-footer{background: black; display: block; width: 100%; height: 500px;}
+body{
+    padding: 0;margin: 0;
+    background: rgb(46, 46, 46);
+}
+header{
+    width: 100%;
+    height: 100px;
+    background: rgb(46, 46, 46);
+    
+}
+.head_wrapper{
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    display: block;
+    background: white;
+    display: flexbox;
+    white-space: nowrap;
+}
+.head_elem{
+
+    margin: 0;
+    height: 100%;
+    width: 24.77%;
+    display: inline-flex;
+    
+    position: relative;
+    background: black;
+    
+}
+footer{
+    height: 500px;
+    width: 100%;
+    background: rgb(46, 46, 46);
+}
+.foot_wrapper{
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    background: rgb(29, 29, 29);
+}
