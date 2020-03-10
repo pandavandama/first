@@ -14,20 +14,32 @@ header{
     height: 100%;
     display: block;
     background: white;
-    display: flexbox;
+    
     white-space: nowrap;
 }
 .head_elem{
-
+    float: left;
+    padding: 0;
     margin: 0;
     height: 100%;
-    width: 24.77%;
+    width: 25%;
     display: inline-flex;
     
     position: relative;
     background: black;
     
 }
+.head_elem:hover{
+    transition: all 1s ease;
+    background: white;
+}
+
+main{
+    background: grey;
+    width: 70%;
+    margin: 0 auto;
+}
+
 footer{
     height: 500px;
     width: 100%;
@@ -37,5 +49,45 @@ footer{
     margin: 0 auto;
     width: 70%;
     height: 100%;
-    background: rgb(29, 29, 29);
+    
+}
+
+.in_1{
+    padding: 20px;
+}
+input{
+    padding: 10px;
+    margin: 20px;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    outline: none;
+}
+
+input[type="text"]{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: tomato;
+}
+
+.ad{
+    position: absolute;
+    width: 15%; height: 100%;
+    background: black;
+    display: block;
+    left:0;
+    cursor: pointer;
+}
+.ad:hover,.ad_right:hover{
+    transition: all 1s ease;
+    background: white;
+
+}
+.ad_right{
+    position: absolute;
+    right: 0;
+    width: 15%; height: 100%;
+    background: black;
+    display: block;
+    cursor: pointer;
 }
