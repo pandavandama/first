@@ -24,7 +24,7 @@
     <input type="text" name="name" id="name_1" placeholder="Имя">
     <button type="submit" value="Отправить" name="sendName" >Отправить</button>
     <button type="reset" >Стереть</button>
-    
+        
     </div>
     </form>
     <section name="info">
@@ -35,10 +35,10 @@
     $query = $pdo->query("SELECT * FROM `name_list`");
     while($row = $query ->fetch (PDO::FETCH_OBJ)){
 
-        echo '<form action="delete.php" method="post" class="form_inf"><div class="info_show" onclick="action('.$row->id.')" id="inf'.$row->id.'">'. $row->name.'<br> '.$row->date.'</div>
+        echo '<form action="delete.php" method="post" class="form_inf"><input type="hidden" name="del" id="del_in" value="'.$row->id.'"><div class="info_show" onclick="action('.$row->id.')" id="inf'.$row->id.'">'. $row->name.'<br> '.$row->date.'</div>
         <button name="delete" type="submit" class="btns" id="btn'.$id.'">del</button>
         </form>';
-        echo $inf;
+        echo $inform;
     }
     echo '</div>';
     //$query = $pdo->query("DELETE FROM `name_list` WHERE id='' ");
@@ -50,19 +50,7 @@
     
 <?php require "Blocks/footer.php" ?>
 
-<script >
-let indx;
 
-let info_show = document.querySelector('.info_show');
-
-
-
-function action(indx){
-    console.log(indx);
-    
-    
-}
-
-</script>
+<script src="js/javascript.js"></script>
 </body>
 </html>

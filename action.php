@@ -1,9 +1,9 @@
 <?php
-$inf= $_POST['id']['10'];
 
 
 
-echo $inf;
+
+
 $name = $_POST['name'];
 $date = date('Y-m-d');
 if($name == ''){
