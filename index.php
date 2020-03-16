@@ -35,7 +35,7 @@
     $query = $pdo->query("SELECT * FROM `name_list`");
     while($row = $query ->fetch (PDO::FETCH_OBJ)){
 
-        echo '<form action="delete.php" method="post" class="form_inf"><input type="hidden" name="del" id="del_in" value="'.$row->id.'"><div class="info_show" onclick="action('.$row->id.')" id="inf'.$row->id.'">'. $row->name.'<br> '.$row->date.'</div>
+        echo '<form action="delete.php" method="post" class="form_inf"><input type="hidden" name="del" id="del_in" value="'.$row->id.'"><div class="info_show"  id="inf'.$row->id.'">'. $row->name.'<br> '.$row->date.'</div>
         <button name="delete" type="submit" class="btns" id="btn'.$id.'">del</button>
         </form>';
         echo $inform;
