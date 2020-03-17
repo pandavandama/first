@@ -15,19 +15,27 @@
 <section class="ad_right">
 
 </section>
-<?php require "Blocks/Header.php" ?>
+<?php require "Blocks/Header.php";  ?>
     
     <main>
     <div class="in_1">
-    
-    <form action="action.php" method="post">
-    <input type="text" name="name" id="name_1" placeholder="Имя">
-    <button type="submit" value="Отправить" name="sendName" >Отправить</button>
-    <button type="reset" >Стереть</button>
-        
+    <div class="form_add_show_btn" id="btn_form1" onclick="show_form_add(true)">+</div>
+    <section class="form_add">
+    <div class="form_add_wrapper">
+    <form action="action.php" method="post" enctype="multipart/form-data">
+    <div id="hide_form_add" onclick="show_form_add(false)">X</div>
+    <input type="text" name="name" class="input_form_add" id="name_1" placeholder="Имя">
+    <div class="btns_form1">
+    <input type="file" name="image" id="img_load">
+    <button type="submit" class="form_btns" value="Отправить" name="sendName" >Отправить</button>
+    <button type="reset" class="form_btns">Стереть</button>
     </div>
     </form>
-    <section name="info">
+    </div>
+    </section>
+    </div>
+    
+    <section name="info" class="info">
     <?php
     require 'configDB.php';
 
@@ -35,10 +43,8 @@
     $query = $pdo->query("SELECT * FROM `name_list`");
     while($row = $query ->fetch (PDO::FETCH_OBJ)){
 
-        echo '<form action="delete.php" method="post" class="form_inf"><input type="hidden" name="del" id="del_in" value="'.$row->id.'"><div class="info_show"  id="inf'.$row->id.'">'. $row->name.'<br> '.$row->date.'</div>
-        <button name="delete" type="submit" class="btns" id="btn'.$id.'">del</button>
-        </form>';
-        echo $inform;
+        require "Blocks/Block_info.php";
+        
     }
     echo '</div>';
     //$query = $pdo->query("DELETE FROM `name_list` WHERE id='' ");
