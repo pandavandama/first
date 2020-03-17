@@ -80,7 +80,8 @@ footer{
 }
 .in_1{
     
-    border: 1px black dashed;
+    
+    background: rgb(46, 46, 46);
     text-align: center;
 }
 .info{
@@ -109,7 +110,7 @@ footer{
 
 
 .info_cont{
-    background: grey;
+    background: white;
     width: 100%;
 
 }
@@ -130,8 +131,9 @@ footer{
     height: 100px;
 }
 .form_inf{
+    background: grey;
     display: inline-block;
-    border: 1px blanchedalmond dashed;
+    border: 1px black solid;
     width: 100px;
     
 }
@@ -147,20 +149,23 @@ width: 100%;
     font-weight: 600;
     padding: 15px;
     display: block;
-    background: hotpink;
+    background: white;
     cursor: pointer;
     width: 50px;
 }
-
+.form_add_show_btn:hover{
+    transition: all 0.6s ease;
+    opacity: 0.5;
+}
 .form_add{
     display: none;
-    border: 3px black dashed;
+    
     position: fixed;
     left: 0;top: 0;right: 0;bottom: 0;
     margin: auto;
     width: 50%;
     height: 50%;
-    background: grey;
+    background: rgba(46, 46, 46, 0.8);
 }
 
 input.input_form_add{
@@ -179,8 +184,19 @@ input.input_form_add{
     bottom: 10px;
     left: 0; right: 0;
 }
-button.form_btns{
+input.form_btns{
+    margin-right: 20px;
+    
+}
+input.form_btns[type="file"]{
 
+}
+.form_btns{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border: 2px black solid;
+    background: white;
     margin: 20px;
 }
 input[type="text"]{

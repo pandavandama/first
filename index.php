@@ -20,19 +20,7 @@
     <main>
     <div class="in_1">
     <div class="form_add_show_btn" id="btn_form1" onclick="show_form_add(true)">+</div>
-    <section class="form_add">
-    <div class="form_add_wrapper">
-    <form action="action.php" method="post" enctype="multipart/form-data">
-    <div id="hide_form_add" onclick="show_form_add(false)">X</div>
-    <input type="text" name="name" class="input_form_add" id="name_1" placeholder="Имя">
-    <div class="btns_form1">
-    <input type="file" name="image" id="img_load">
-    <button type="submit" class="form_btns" value="Отправить" name="sendName" >Отправить</button>
-    <button type="reset" class="form_btns">Стереть</button>
-    </div>
-    </form>
-    </div>
-    </section>
+    <?php require "Blocks/form_add.php";  ?>
     </div>
     
     <section name="info" class="info">
@@ -40,7 +28,7 @@
     require 'configDB.php';
 
     echo '<div class="info_cont">';
-    $query = $pdo->query("SELECT * FROM `name_list`");
+    $query = $pdo->query("SELECT * FROM `name_list` WHERE id > 99");
     while($row = $query ->fetch (PDO::FETCH_OBJ)){
 
         require "Blocks/Block_info.php";

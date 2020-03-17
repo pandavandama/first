@@ -5,7 +5,7 @@ $inform = $_POST['del'];
 require "configDB.php";
 
 
-$query = $pdo->query("SELECT * FROM `name_list`");
+$query = $pdo->query("SELECT * FROM `name_list` WHERE id = '$inform'");
 $row = $query ->fetch (PDO::FETCH_OBJ);
 unlink($row->img_path);
 
