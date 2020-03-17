@@ -14,4 +14,4 @@ $query = $pdo->prepare($sql);
 
 $query->execute();
 
-header('Location: /');
+header('Location: /'.$loc.'');

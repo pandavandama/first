@@ -15,7 +15,10 @@
 <section class="ad_right">
 
 </section>
-<?php require "Blocks/Header.php";  ?>
+<?php require "Blocks/Header.php";
+$delete_path = "delete.php";
+$loc = "";
+?>
     
     <main>
     <div class="in_1">

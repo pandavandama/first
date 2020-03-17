@@ -86,7 +86,7 @@ footer{
 }
 .info{
     
-    width: 215px;
+    width: 218px;
     display: block;
     height: 400px;
     overflow: scroll;
@@ -217,4 +217,8 @@ div#hide_form_add{
     top: 5px;
     padding: 5px;
     background: white;    
+}
+.a_btns{
+    width: 100%;
+    height: 100%;
 }
