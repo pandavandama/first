@@ -11,6 +11,7 @@ $file_type = $_FILES['image']['type'];
 
 if($file_type == 'image/png')
 $type_path = '.png';
+else echo 'error';
 
 
 
@@ -31,10 +32,15 @@ if($name == ''){
 
 $dsn = 'mysql:host=192.168.1.188:3306; dbname=name-list';
 $pdo = new PDO($dsn, 'root');
+$query = $pdo->query("SELECT * FROM `name_list` ORDER BY id");
+while($row = $query ->fetch (PDO::FETCH_OBJ)){
 
-$query = $pdo->query("SELECT * FROM `name_list` ORDER BY id DESC");
-    $row = $query ->fetch (PDO::FETCH_OBJ);
-    $last_id = $row->id + 1;
+    
+    $last_id = $row->id+1;
+}
+
+    
+    
     
 
 $file_new_name = $images_path.$name.'['.$last_id.']'.$type_path;
