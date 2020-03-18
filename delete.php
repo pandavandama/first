@@ -1,6 +1,6 @@
 <?php
 $inform = $_POST['del'];
-
+$this_path = $_POST['path'];
 
 require "configDB.php";
 
@@ -14,4 +14,5 @@ $query = $pdo->prepare($sql);
 
 $query->execute();
 
-header('Location: /'.$loc.'');
+
+header('Location: '.$this_path.'');

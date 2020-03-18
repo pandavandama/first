@@ -4,6 +4,7 @@ $images_path = "Images_users/";
 
 
 //var_dump($_FILES);
+$this_path = $_POST['path'];
 
 $file_name = $_FILES['image']['name'];
 $file_tmp = $_FILES['image']['tmp_name'];
@@ -50,4 +51,5 @@ $sql = "INSERT INTO `name_list`(name,date,img_path) VALUES('$name', '$date','$fi
 $query = $pdo->prepare($sql);
 $query->execute();
 
-header('Location: /');
+//echo $this_path;
+header('Location: '.$this_path.'');

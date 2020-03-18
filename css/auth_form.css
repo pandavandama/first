@@ -1,0 +1,16 @@
+.block_auth{
+    background: rgba(46, 46, 46, 0.5);
+    display: none;
+    position: fixed;
+    margin: auto;
+    left: 0;right: 0;top: 0;bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 50px;
+}
+.block_auth input{
+    display: block;
+    
+}
+
